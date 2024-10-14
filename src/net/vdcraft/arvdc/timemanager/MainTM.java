@@ -34,7 +34,6 @@ import net.vdcraft.arvdc.timemanager.mainclass.SyncHandler;
 import net.vdcraft.arvdc.timemanager.placeholders.ChatHandler;
 import net.vdcraft.arvdc.timemanager.placeholders.ConsoleCommandHandler;
 import net.vdcraft.arvdc.timemanager.placeholders.PlayerCommandHandler;
-import net.vdcraft.arvdc.timemanager.placeholders.MVdWPAPIHandler;
 import net.vdcraft.arvdc.timemanager.placeholders.PAPIHandler;
 
 @SuppressWarnings("unused")
@@ -725,11 +724,6 @@ public class MainTM extends JavaPlugin {
 					&& Bukkit.getPluginManager().getPlugin(CF_PLACEHOLDER_PAPI) != null) {
 				MsgHandler.debugMsg(CF_PLACEHOLDER_PAPI + " detected.");
 				new PAPIHandler(this).register();
-			}
-			if (MainTM.getInstance().getConfig().getString(CF_PLACEHOLDERS + "." + CF_PLACEHOLDER_MVDWPAPI).equalsIgnoreCase(ARG_TRUE)
-					&& Bukkit.getPluginManager().getPlugin(CF_PLACEHOLDER_MVDWPAPI) != null) {
-				MsgHandler.debugMsg(CF_PLACEHOLDER_MVDWPAPI + " detected.");
-				MVdWPAPIHandler.loadMVdWPlaceholderAPI();
 			}
 			
 			// #15. bStats
